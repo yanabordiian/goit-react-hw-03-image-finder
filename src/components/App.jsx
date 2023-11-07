@@ -98,7 +98,7 @@ export class App extends Component {
         {this.state.page < Math.ceil(this.state.totalHits / 12) && (
           <Button onClick={this.onHandleClickLoadMore} />
         )}
-        <Loader isLoading={this.state.isLoading} />
+       {this.state.isLoading && (<Loader isLoading={this.state.isLoading} />)}
         {this.state.isOpenModal && (
           <Modal
             dataModal={this.state.dataModal}
